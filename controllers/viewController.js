@@ -2,9 +2,9 @@ let tourModel = require('./../model/tourModel');
 let catchAsync = require('./../util/catchAsync');
 let appError = require('./../util/appError');
 let bookingModel = require('./../model/bookingModel');
-
+ 
 exports.getOverview = catchAsync(async (req, res, next) => {
-    let tours = await tourModel.find();
+    let tours = await tourModel.find(); 
     res.status(200).render('overview', {
         title: 'Home - Tours',
         tours
